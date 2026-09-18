@@ -524,40 +524,6 @@ function evaluateExpression(expression) {
 
         return Math.log(x);
     }
-
-
-    /* Average */
-
-    function avg(...numbers) {
-
-        if (numbers.length === 0) {
-            throw new Error(
-                "Enter numbers for average"
-            );
-        }
-
-        if (
-            numbers.some(
-                number =>
-                    typeof number !== "number" ||
-                    !Number.isFinite(number)
-            )
-        ) {
-            throw new Error(
-                "Invalid average values"
-            );
-        }
-
-        return (
-            numbers.reduce(
-                (sum, number) =>
-                    sum + number,
-                0
-            ) / numbers.length
-        );
-    }
-
-
     /*
        IMPORTANT:
        The function names below match the
@@ -575,7 +541,6 @@ function evaluateExpression(expression) {
             "sqrt",
             "log",
             "ln",
-            "avg",
             "PI",
             "e",
 
@@ -594,7 +559,6 @@ function evaluateExpression(expression) {
             sqrt,
             log,
             ln,
-            avg,
             Math.PI,
             Math.E
         );
